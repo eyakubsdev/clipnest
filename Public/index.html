@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="ClipNest — a permission-first media download workspace.">
+  <title>ClipNest — Media downloads, made simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">C</span>clipnest<span class="brand-dot">.</span></a>
+  <nav><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="nav-cta" href="#downloader">Get started ↗</a></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow"><span class="live-dot"></span> SIMPLE MEDIA WORKSPACE</div>
+  <h1>Your media.<br><span>Ready when you are.</span></h1>
+  <p class="hero-copy">A simple place to access downloads for videos and audio you own, created, or have permission to save.</p>
+  <section class="download-card" id="downloader">
+    <div class="card-heading"><div><span class="card-kicker">DOWNLOAD TOOL</span><h2>Paste a media link</h2></div><span class="secure-pill">↗ Permission-first</span></div>
+    <form id="download-form">
+      <label class="sr-only" for="media-url">Direct media download URL</label>
+      <div class="url-wrap"><span class="link-icon">↗</span><input id="media-url" type="url" placeholder="Paste a direct HTTPS media link…" required autocomplete="url"></div>
+      <div class="form-row">
+        <label class="select-wrap"><span>MEDIA TYPE</span><select id="media-type"><option value="video">Video</option><option value="audio">Audio</option><option value="image">Image</option><option value="file">Other file</option></select></label>
+        <button type="submit" class="download-btn">Continue <span>→</span></button>
+      </div>
+    </form>
+    <div id="result" class="result" aria-live="polite" hidden></div>
+    <p class="fine-print">Only use direct links that are publicly downloadable and that you have the right to save. ClipNest does not bypass platform restrictions.</p>
+  </section>
+  <div class="platform-row"><span>BUILT FOR PERMITTED DOWNLOADS</span><div><b>Creator files</b><i>·</i><b>Public-domain media</b><i>·</i><b>Open-licensed content</b></div></div>
+</section>
+<section class="features" id="how">
+  <div class="section-intro"><span class="card-kicker">HOW IT WORKS</span><h2>Three steps. No clutter.</h2><p>Use a direct download URL supplied by the creator or hosting service.</p></div>
+  <div class="feature-grid">
+    <article><div class="feature-icon">↗</div><h3>01. Add your link</h3><p>Paste a direct file URL from a source that permits downloading.</p></article>
+    <article><div class="feature-icon">✓</div><h3>02. Check permission</h3><p>Confirm that you own the content or have permission to download it.</p></article>
+    <article><div class="feature-icon">↓</div><h3>03. Open the file</h3><p>Continue to the source. The source controls the download.</p></article>
+  </div>
+</section>
+<section class="notice"><div class="notice-icon">ⓘ</div><div><h3>Designed for responsible downloads</h3><p>ClipNest does not scrape social platforms, remove DRM, or bypass paywalls. Platform integrations must use official APIs or creator-authorized export/download methods.</p></div></section>
+<section class="faq" id="faq"><span class="card-kicker">GOOD TO KNOW</span><h2>Frequently asked questions</h2>
+  <details><summary>Can I download any social-media video?</summary><p>No. A platform link is not automatically a permitted download link. Use official download/export features or direct links that the content owner has authorized.</p></details>
+  <details><summary>Why is my source not accepted?</summary><p>The server only accepts exact hostnames listed in its ALLOWED_DOWNLOAD_HOSTS setting. The site owner must review and configure a permitted direct-download host first.</p></details>
+  <details><summary>Is ClipNest free?</summary><p>The planned model is free access supported by advertising. Advertising will be added after the site has its own privacy information and meets the advertising provider's requirements.</p></details>
+</section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">C</span>clipnest<span class="brand-dot">.</span></a><span>© 2026 ClipNest · For content you have permission to download.</span></footer>
+<script src="/app.js"></script>
+</body></html>
